@@ -1,0 +1,3 @@
+campa_homepage:
+    path:     /
+    defaults: { _controller: CampaBundle:Default:index }
