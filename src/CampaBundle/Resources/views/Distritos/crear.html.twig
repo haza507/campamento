@@ -1,0 +1,61 @@
+{% extends 'layout.html.twig' %}
+
+
+
+{% block body %}
+{{ parent()}}
+<div class="container">
+	<div class="col-md-12">
+		<div class="page-header margin-none">
+<h2 class="page-header"> Campamento Nacional de Jovenes de las Asambleas de Dios</h2>
+    	</div>
+    <div class="row well">
+        <div class="col-md-6">
+            <div class="page-header">
+                <h2>Nueva Distrito</h2>
+                
+                	{% for flashMessage in app.session.flashbag.get('notice') %}
+    <div class="flash-notice">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+            </div>
+            {{ form_start(form, {'attr': {'action' :'', 'method':'POST'}})}}
+            
+                <div class="form-group">
+                    {{ form_label(form.nombre)}}
+                    {{ form_widget(form.nombre,{'attr': {'class': 'form-control','placeholder': 'Nombre de la Distrito'}})}}
+                    <samp class="text-danger">{{form_errors(form.nombre)}}</samp>
+
+                    <br>
+                    {{ form_label(form.lider)}}
+                    {{ form_widget(form.lider,{'attr': {'class': 'form-control','placeholder': 'Lider del Distrito'}})}}
+                    <samp class="text-danger">{{form_errors(form.lider)}}</samp>
+                    
+                    <br>
+                    {{ form_label(form.valor)}}
+                    {{ form_widget(form.valor,{'attr': {'class': 'form-control','placeholder': 'Valor del Campamento $'}})}}
+                    <samp class="text-danger">{{form_errors(form.valor)}}</samp>
+                    
+                    <br>
+                    <br>
+                    {{ form_label(form.Zona)}}
+                    {{ form_widget(form.Zona,{'attr': {'class': 'form-control'}})}}
+                    
+                    
+                    
+                </div>
+            
+            <p>
+
+                {{form_widget(form.submit,{'labe': 'Crear la Distrito','attr': {'class':'btn btn-success'}})}} 
+            </p>
+            
+            {{ form_end(form)}}
+        </div>
+    </div>
+    	
+</div>
+</div>
+		
+{% endblock %}

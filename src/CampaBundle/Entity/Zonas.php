@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Zonas
- *
+ * @ORM\HasLifecycleCallbacks()
  * @ORM\Table(name="zonas")
  * @ORM\Entity(repositoryClass="CampaBundle\Repository\ZonasRepository")
  */

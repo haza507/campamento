@@ -1,0 +1,4 @@
+
+campa_zonas_ver:
+    path: /ver
+    defaults: { _controller: CampaBundle:Zonas:ver }

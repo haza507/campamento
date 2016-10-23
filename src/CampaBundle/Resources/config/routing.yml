@@ -1,3 +1,129 @@
+ #pagina de inicio general
 campa_homepage:
-    path:     /
+    path:  /
     defaults: { _controller: CampaBundle:Default:index }
+#rutas de zonas
+
+campa_zonas:
+    path:  /zonas
+    defaults: { _controller: CampaBundle:Zonas:index }
+    
+campa_zonas_mostrar:
+    path:     /zonas/mostrar/{id}
+    defaults: { _controller: CampaBundle:Zonas:mostrar }
+
+campa_zonas_ver:
+    path:     /zonas/ver
+    defaults: { _controller: CampaBundle:Zonas:ver }
+    
+
+campa_zonas_crear:
+    path:     /zonas/crear
+    defaults: { _controller: CampaBundle:Zonas:crear }
+
+campa_zonas_editar:
+    path:     /zonas/editar/{id}
+    defaults: { _controller: CampaBundle:Zonas:editar }
+    requirements: {_method : post|put}
+
+campa_zonas_eliminar:
+    path:     /zonas/eliminar/{id}
+    defaults: { _controller: CampaBundle:Zonas:eliminar }
+    
+#rutas distritos
+
+
+campa_distritos:
+    path:  /distritos
+    defaults: { _controller: CampaBundle:Distritos:index }
+    
+campa_distritos_mostrar:
+    path:     /distritos/mostrar/{id}
+    defaults: { _controller: CampaBundle:Distritos:mostrar }
+
+campa_distritos_ver:
+    path:     /distritos/ver
+    defaults: { _controller: CampaBundle:Distritos:ver }
+    
+
+campa_distritos_crear:
+    path:     /distritos/crear
+    defaults: { _controller: CampaBundle:Distritos:crear }
+
+campa_distritos_editar:
+    path:     /distritos/editar/{id}
+    defaults: { _controller: CampaBundle:Distritos:editar }
+    requirements: {_method : post|put}
+
+campa_distritos_eliminar:
+    path:     /distritos/eliminar/{id}
+    defaults: { _controller: CampaBundle:Distritos:eliminar }
+
+
+campa_distritos_add:
+    path:     /distritos/add
+    defaults: { _controller: CampaBundle:Distritos:add }
+
+campa_distritos_create:
+    path:     /distritos/create
+    defaults: { _controller: CampaBundle:Distritos:create }
+    methods: POST
+
+#rutas cabanas
+
+
+campa_cabanas:
+    path:  /cabanas
+    defaults: { _controller: CampaBundle:Cabanas:index }
+    
+campa_cabanas_mostrar:
+    path:     /cabanas/mostrar/{id}
+    defaults: { _controller: CampaBundle:Cabanas:mostrar }
+
+campa_cabanas_ver:
+    path:     /cabanas/ver
+    defaults: { _controller: CampaBundle:Cabanas:ver }
+    
+
+campa_cabanas_crear:
+    path:     /cabanas/crear
+    defaults: { _controller: CampaBundle:Cabanas:crear }
+
+campa_cabanas_editar:
+    path:     /cabanas/editar/{id}
+    defaults: { _controller: CampaBundle:Cabanas:editar }
+    requirements: {_method : post|put}
+
+campa_cabanas_eliminar:
+    path:     /cabanas/eliminar/{id}
+    defaults: { _controller: CampaBundle:Cabanas:eliminar }
+
+#rutas iglesias
+
+
+campa_iglesias:
+    path:  /iglesias
+    defaults: { _controller: CampaBundle:Iglesias:index }
+    
+campa_iglesias_mostrar:
+    path:     /iglesias/mostrar/{id}
+    defaults: { _controller: CampaBundle:Iglesias:mostrar }
+
+campa_iglesias_ver:
+    path:     /iglesias/ver
+    defaults: { _controller: CampaBundle:Iglesias:ver }
+    
+
+campa_iglesias_crear:
+    path:     /iglesias/crear
+    defaults: { _controller: CampaBundle:Iglesias:crear }
+
+campa_iglesias_editar:
+    path:     /iglesias/editar/{id}
+    defaults: { _controller: CampaBundle:Iglesias:editar }
+    requirements: {_method : post|put}
+
+campa_iglesias_eliminar:
+    path:     /iglesias/eliminar/{id}
+    defaults: { _controller: CampaBundle:Iglesias:eliminar }
+

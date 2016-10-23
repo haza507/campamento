@@ -1,0 +1,54 @@
+{% extends 'layout.html.twig' %}
+
+
+
+{% block body %}
+{{ parent()}}
+<div class="container">
+	<div class="col-md-12">
+		<div class="page-header margin-none">
+<h2 class="padding-none"> Ver las Distritos</h2>
+    	</div>
+    	<div class="table-responsive">
+  <h3>Total de registros: <strong>{{pagination.getTotalItemCount}}</strong></h3>
+<table class="table table-striped table-hover">
+	<thead>
+<tr>
+	
+	<th>Nombre</th>
+	<th>Lider</th>
+	<th>Zona</th>
+	<th>Acciones</th>
+</tr>
+	<thead>
+<tbody>
+{% for pagination in pagination %}
+
+<tr>
+	
+	<td>{{pagination.nombred}}</td>
+
+
+
+<tr>
+{% endfor %}
+</tbody>
+</table>
+{# display navigation #}
+			<div class="navigation">
+			    {{  knp_pagination_render(pagination) }}
+			</div>
+</div>
+</div>
+</div>
+	<script>
+function elimina(y) {
+	var url =  "eliminar/" + y;
+    if (confirm("Confime que desea eliminar") == true) {
+		window.location.href= url;
+		 	
+    } 
+}
+		
+</script>		
+{% endblock %}

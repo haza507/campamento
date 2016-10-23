@@ -1,0 +1,36 @@
+{% extends 'layout.html.twig' %}
+
+
+
+{% block body %}
+{{ parent()}}
+<div class="container">
+	<div class="col-md-12">
+		<div class="page-header margin-none">
+<h2 class="page-header"> Campamento Nacional de Jovenes de las Asambleas de Dios</h2>
+    	</div>
+    	<div>
+    	<h2 class="padding-none">Dato Encontrado</h2>
+    	<div class="page-header margin-none">
+<h2 class="padding-none"> Información de la Zonas</h2>
+    	</div>
+    	<br>
+    	<center>
+<div class="table-responsive">
+    	<ul class="list-group">
+    		<li class="list-group-item">Id Zona = {{zona.IdZona}}</li>
+    		<li class="list-group-item">Nombre de la Zona = {{zona.Nombre}}</li>
+    		<li class="list-group-item">Lider de la Zona = {{zona.Lider}}</li>
+    	</ul>
+    	
+    	<br>
+    	<a class="btn btn-default" href="../ver">Regresar</a>
+
+
+</div>    	</center>	
+    	</div>
+    	
+</div>
+</div>
+		
+{% endblock %}

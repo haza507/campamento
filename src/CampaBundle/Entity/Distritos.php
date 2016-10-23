@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Distritos
- *
+ * @ORM\HasLifecycleCallbacks()
  * @ORM\Table(name="distritos")
  * @ORM\Entity(repositoryClass="CampaBundle\Repository\DistritosRepository")
  */
@@ -203,6 +203,8 @@ class Distritos
     {
         return $this->Zona;
     }
+
+
 
     /**
      * Add iglesia
